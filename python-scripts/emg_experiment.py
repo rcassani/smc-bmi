@@ -10,12 +10,21 @@ from playsound import playsound
 import numpy as np
 
 if __name__ == "__main__":
+    
+    ###################    
+    ## Instructions 
+    ###################
+    # 1. Run MuLES with the Saving and Streaming setings
+    # 2. Run the emg_scene in the Unity3D proyect
+    # 3. Run this Python script
+
+    
     ###################    
     ## Parameters
     ###################
     time_stimulus = 2
-    time_trial = 0
-    n_trials = 10
+    time_trial = 2
+    n_trials = 2
     
     neutral = 10
     angry = 12
@@ -25,42 +34,16 @@ if __name__ == "__main__":
     np.random.seed(42)
     stimuli = np.array([neutral,angry,astonichment,happy])
 
-    mules_path = r'C:\Program Files (x86)\MuSAE_Lab\MuLES\mules.exe'
-#    eog_path = r'D:\Users\cassani\Documents\GitHub\oculus-eeg\eog_server.exe'
-    
-    eog_path = r'C:\Users\student\Documents\GitHub\oculus-eeg\unity-app\emotion_server.exe'
-
-    # Number of DEVICE in MuLES config.ini file
-    mules_eeg_device = 'DEVICE07'
-#    mules_ecg_device = "DEVICE07"
-
-    ###################    
-    ## Execute other software
-    ###################
-    # Execute MuLES
-    subprocess.Popen(mules_path + ' -- "' + mules_eeg_device + '"' + ' PORT=30000 LOG=T TCP=T')
-#    pause(5)
-    # Execute MuLES
-#    subprocess.Popen(mules_path + ' -- "' + mules_ecg_device + '"' + ' PORT=31000 LOG=T TCP=T') 
-    # Pause for the Experimenter to confirm the quality of the Epoc electrodes
-    pause(15)
-
-    # Execute Unity App
-    #subprocess.Popen(eog_path)
-
     ###################    
     ## TCP/IP clients
     ###################
     # TCP Client for MuLES
     mules_eeg = MulesClient('localhost', 30000)
-    pause(2)
-#    mules_ecg = MulesClient('localhost', 31000)
-    #pause(10)
+    pause(10)
+
     # TCP Client for Unity
     unity = TcpClient('localhost', 40000) 
     unity.connect()
-
-    # Wait for Unity App
     pause(3)
 
     ###################    

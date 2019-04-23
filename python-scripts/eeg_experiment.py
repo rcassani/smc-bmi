@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Automates the SSVEP experiment
+EEG SSVEP experiment
 """
 
 from mules import MulesClient
@@ -9,6 +9,14 @@ import subprocess
 from playsound import playsound
 
 if __name__ == "__main__":
+
+    ###################    
+    ## Instructions 
+    ###################
+    # 1. Run MuLES with the Saving and Streaming setings
+    # 2. Run the eeg_scene in the Unity3D proyect
+    # 3. Run this Python script
+
     ###################    
     ## Parameters
     ###################
@@ -16,42 +24,16 @@ if __name__ == "__main__":
     time_blink  = 30
     time_closed = 30
     
-    mules_path = 'C:\Program Files (x86)\MuSAE_Lab\MuLES\mules.exe'
-#    ssvep_path = r'C:\Users\student\Documents\GitHub\oculus-eeg\unity-app\Builds\ssvep\ssvep_server.exe'
-
-    # Number of DEVICE in MuLES config.ini file
-    mules_eeg_device = 'DEVICE06'
-#    mules_ecg_device = "DEVICE08"
-
-    ###################    
-    ## Execute other software
-    ###################
-    # Execute MuLES
-    subprocess.Popen(mules_path + ' -- "' + mules_eeg_device + '"' + ' PORT=30000 LOG=T TCP=T')
-    pause(5)
-    # Execute MuLES
-#    subprocess.Popen(mules_path + ' -- "' + mules_ecg_device + '"' + ' PORT=31000 LOG=T TCP=T') 
-    # Pause for the Experimenter to confirm the quality of the Epoc electrodes
-    pause(20)
-    
-    # Execute Unity App
-#    subprocess.Popen(ssvep_path)
-
     ###################    
     ## TCP/IP clients
     ###################
     # TCP Client for MuLES
-    mules_eeg = MulesClient('localhost', 30000)
-#    pause(2)
-#    mules_ecg = MulesClient('localhost', 31000)
-    
+    mules_eeg = MulesClient('localhost', 30000)   
     pause(10)
     
     # TCP Client for Unity
     unity = TcpClient('localhost', 40000) 
     unity.connect()
-
-    # Wait for Unity App
     pause(3)
 
     ###################    
