@@ -18,13 +18,22 @@ It is comprised of three 30-second stages where the user performs:
   1. resting with open eyes
   2. staring at a blinking sphere (12.5 Hz) to evoke [SSVEP](https://en.wikipedia.org/wiki/Steady_state_visually_evoked_potential)
   3. resting with closed eyes
+  <p align="center">
+  <img src="https://user-images.githubusercontent.com/8238803/71700591-e3e2fb00-2d92-11ea-8717-08c116199da0.gif" width="300" /> 
+  </p>
 
-### 3. EOG scenarios
+### 3. EOG scenario
 The user is asked to follow a target for approximately 5 minutes. The target moved from the center of the field-of-view to one of eight positions: right, right-up, up, left-up, left, left-down, down, and right-down.
-
-### 4. Facial EMG scenarios
+  <p align="center">
+  <img src="https://user-images.githubusercontent.com/8238803/71700593-e80f1880-2d92-11ea-8aa1-8f699cf1646c.gif" width="300" /> 
+  </p>
+  
+### 4. Facial EMG scenario
 Facial EMG signals can be used to detect different facial expressions. During 5 minutes, the user is presented with one of four cues that indicate what facial expression to perform.
-
+  <p align="center">
+  <img src="https://user-images.githubusercontent.com/8238803/71700595-e9404580-2d92-11ea-9a9b-3723da0aa58e.gif" width="300" /> 
+  </p>
+  
 ## Requirements
 Besides Unity and Python3, the experiments require [MuLES](https://github.com/MuSAELab/MuLES/releases) for the acquisition and synchronization of physiological signals.
 
