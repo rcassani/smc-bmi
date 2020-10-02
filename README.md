@@ -1,5 +1,7 @@
 ## Introduction
-This repository contains the [Unity](https://unity.com/) project and scenes, and the Python3 scripts for experiments described in the article "Combining a Body/Brain-Machine Interface with an Off-the-Shelf Virtual Reality Headset for Next-Generation Immersive Applications" in the IEEE Systems, Man, and Cybernetics Magazine, Year: X | Volume: Y, Issue Z.
+This repository contains the [Unity](https://unity.com/) project and scenes, and the Python3 scripts for experiments described in the article:
+
+**“Neural interface instrumented virtual reality headsets: Toward next-generation immersive applications,” IEEE Systems, Man, and Cybernetics Magazine, vol. 6, no. 3, pp. 20–28, 2020.** [Link](https://ieeexplore.ieee.org/document/9142156)
 
 The article describes the development of system that combines an open-source, wireless, and multimodal (BMI) with an off-the-shelf head-mounted display (HMD) for VR/AR application. The proposed system is capable of measuring electroencephalography (EEG), electrooculography (EOG), electrocardiography (ECG) and facial electromyography (EMG) signals in a portable, wireless and non-invasive way.
 
