@@ -6,10 +6,14 @@ This repository contains the [Unity](https://unity.com/) project and scenes, and
 The article describes the development of system that combines an open-source, wireless, and multimodal (BMI) with an off-the-shelf head-mounted display (HMD) for VR/AR application. The proposed system is capable of measuring electroencephalography (EEG), electrooculography (EOG), electrocardiography (ECG) and facial electromyography (EMG) signals in a portable, wireless and non-invasive way.
 
 ## BMI-HMD system
-The BMI-HMD system is comprised of three main parts:
-1. The biopotential amplifier module, based on the [OpenBCI Cyton board](https://shop.openbci.com/products/cyton-biosensing-board-8-channel)
-2. The HMD used was the [Oculus Development Kit 2](https://en.wikipedia.org/wiki/Oculus_Rift#Development_Kit_2)
-3. Dry electrodes
+The BMI-HMD system (Figure 3) is comprised of three main parts:
+1. The biopotential amplifier module, based on the [OpenBCI Cyton board](https://shop.openbci.com/products/cyton-biosensing-board-8-channel) (Figure 1a and 1b)
+2. The HMD used was the [Oculus Development Kit 2](https://en.wikipedia.org/wiki/Oculus_Rift#Development_Kit_2) (Figure 2)
+3. Dry electrodes (Figure 1c and 1d)
+
+| [<img src="https://user-images.githubusercontent.com/8238803/94977768-461a8900-04e8-11eb-8068-e918b30ef536.png" width="450"/>](https://user-images.githubusercontent.com/8238803/94977768-461a8900-04e8-11eb-8068-e918b30ef536.png)| <img src="https://user-images.githubusercontent.com/8238803/94977776-47e44c80-04e8-11eb-9166-4d54d69f07ca.png" width="450"/> |
+
+[<img src="https://user-images.githubusercontent.com/8238803/94977779-49ae1000-04e8-11eb-87c5-d014b4a4e7e9.png" width="800"/>](https://user-images.githubusercontent.com/8238803/94977779-49ae1000-04e8-11eb-87c5-d014b4a4e7e9.png)
 
 ## Validation scenarios
 Three validation scenarios were developed to acquire EEG, EOG and facial EMG signals.
